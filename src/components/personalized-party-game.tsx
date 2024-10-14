@@ -77,9 +77,9 @@ export function PersonalizedPartyGameComponent() {
   const [gameMode, setGameMode] = useState<GameMode | "">("");
   const [themePack, setThemePack] = useState<ThemePack>("party");
   const [customPrompt, setCustomPrompt] = useState("");
-  const [prompts, setPrompts] = useState(initialPrompts);
   const [error, setError] = useState("");
   const [currentPlayerIndex, setCurrentPlayerIndex] = useState(0);
+  const [prompts, setPrompts] = useState(initialPrompts);
 
   const addPlayer = () => {
     if (newPlayerName.trim()) {
@@ -268,6 +268,7 @@ export function PersonalizedPartyGameComponent() {
                         width={40}
                         height={40}
                         className="rounded-full mr-2"
+                        unoptimized
                       />
                       <span>{player.name}</span>
                     </div>
